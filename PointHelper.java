@@ -35,14 +35,11 @@ public class PointHelper {
         y = gY - y;
         z = gZ - z;
         //2. Поворот против часовой на longitude
-        System.out.println("x = " + x + " " + x * Math.cos(longitude2) + " " + y * Math.sin(longitude2));
         x = x * Math.cos(longitude2) - y * Math.sin(longitude2);
         y = x * Math.sin(longitude2) + y * Math.cos(longitude2);
         //3. Поворопот по часовой на П/2 - latitude
         x = x * Math.sin(latitude2) - z * Math.cos(latitude2);
         z = -x * Math.cos(latitude2) + z * Math.sin(latitude2);
-
-        System.out.println("x = " + x);
 
     }
 
